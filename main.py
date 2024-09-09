@@ -9,7 +9,7 @@ def load_recipe(json_string):
 
 def adjust_recipe(recipe1, new_servings1):
     factor = new_servings1 / recipe1['servings']
-    adjusted_ingredients = {ingredient: amount * factor for ingredient, amount in recipe['ingredients'].items()}
+    adjusted_ingredients = {ingredient: amount * factor for ingredient, amount in recipe1['ingredients'].items()}
     return {
         'title': recipe1['title'],
         'ingredients': adjusted_ingredients,
